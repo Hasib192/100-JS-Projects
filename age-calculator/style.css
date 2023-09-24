@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fff;
+    background: #efefef;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: #134A46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    text-align: center;
+}
+
+span {
+    position: relative;
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+.basic-slide {
+    display: inline-block;
+    width: 215px;
+    padding: 10px 0 10px 15px;
+    font-family: "Open Sans", sans;
+    font-weight: 400;
+    color: #377D6A;
+    background: #efefef;
+    border: 0;
+    border-radius: 3px;
+    outline: 0;
+    text-indent: 70px;
+    transition: all .3s ease-in-out;
+}
+
+.basic-slide::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300;
+}
+
+label {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 10px 15px;
+    text-shadow: 0 1px 0 rgba(19, 74, 70, .4);
+    background: #7AB893;
+    transition: all .3s ease-in-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.basic-slide:focus,
+.basic-slide:active {
+    color: #377d6a;
+    text-indent: 0;
+    background: #fff;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.basic-slide:focus::-webkit-input-placeholder,
+.basic-slide:active::-webkit-input-placeholder {
+    color: #aaa;
+}
+
+.basic-slide:focus+label,
+.basic-slide:active+label {
+    transform: translateX(-100%);
+}
+
+input[type=button] {
+    width: 215px;
+    margin-top: 40px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    background-color: #7AB893;
+    color: #ffffff;
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 16px;
+}
+
+input[type=button]:hover {
+    background-color: #377D6A;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 48px;
+}

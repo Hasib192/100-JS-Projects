@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="row">
+            <span>
+                <input class="basic-slide" id="date" type="number" min="0" placeholder="Your Birth Date" />
+                <label for="Date">Date</label>
+            </span>
+            <span>
+                <input class="basic-slide" id="month" type="number" min="0" placeholder="Your Birth Month" />
+                <label for="Month">Month</label>
+            </span>
+            <span>
+                <input class="basic-slide" id="year" type="number" min="0" placeholder="Your Birth Year" />
+                <label for="Year">Year</label>
+            </span>
+            <div>
+                <input type="button" name="submit" value="Submit" onclick="calcAge()" />
+            </div>
+            <h2 id="age">Click Submit to show your Age</h2>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script> -->
+</body>
+
+</html>
