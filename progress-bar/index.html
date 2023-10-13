@@ -8,10 +8,6 @@
 
     <link rel="stylesheet" href="./style.css">
 
-    <!-- Material Icon -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
 </head>
 
 <body>
@@ -24,7 +20,7 @@
                         <span class="progress"></span>
                     </span>
                 </div>
-                <button class="button button-green" onclick="progressWithoutValue(0)">Go</button>
+                <button class="button button-green" onclick="barWithoutValue(0)">Go</button>
             </div>
             <div class="item item-1">
                 <div class="item item-0">
@@ -33,11 +29,21 @@
                             <span class="progress progress-value">20%</span>
                         </span>
                     </div>
-                    <button class="button button-green" onclick="progressWithValue(20)">Go</button>
+                    <button class="button button-green" onclick="barWithValue(20)">Go</button>
                 </div>
             </div>
-            <div class="item item-2">3</div>
-            <div class="item item-3">4</div>
+            <div class="item item-2">
+                <div class="circle-progress-bar">
+                    <progress value="0" min="0" max="100" style="visibility:hidden;height:0;width:0;">0</progress>
+                </div>
+                <button class="button button-hotpink" onclick="circleWithoutValue(0)">Go</button>
+            </div>
+            <div class="item item-3">
+                <div class="circle-progress-bar circle-progress-bar-value">
+                    <progress value="20" min="0" max="100" style="visibility:hidden;height:0;width:0;"></progress>
+                </div>
+                <button class="button button-hotpink" onclick="circleWithValue(20)">Go</button>
+            </div>
         </div>
     </div>
 
