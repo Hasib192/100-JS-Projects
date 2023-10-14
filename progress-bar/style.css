@@ -7,6 +7,12 @@
     font-family: 'Lato', sans-serif
 }
 
+:root {
+    --bar: rgba(0, 0, 0, 0.075);
+    --linear-progress-bar: #75b800;
+    --circular-progress-bar: #43A6C6;
+}
+
 /* --- CENTERED ELEMENT --- */
 .center {
     position: absolute;
@@ -37,7 +43,7 @@ h2 {
 .item {
     width: 400px;
     height: 300px;
-    border: 1px solid #000;
+    border: 2px solid #e5e5e5;
     border-radius: 6px;
     display: flex;
     align-items: center;
@@ -90,22 +96,22 @@ span {
 }
 
 .bar {
-    background: rgba(0, 0, 0, 0.075);
+    background: var(--bar);
 }
 
 .progress {
-    background: #75b800;
+    background: var(--linear-progress-bar);
     color: #fff;
     padding: 5px;
     width: 0;
-    height: 30px;
+    height: 20px;
 }
 
 .progress-value {
     text-align: center;
     line-height: 17px;
     width: 20%;
-    line-height: 27.5px;
+    line-height: 17.5px;
 }
 
 /* circle */
@@ -115,7 +121,7 @@ span {
     border-radius: 50%;
     background:
         radial-gradient(closest-side, white 79%, transparent 80% 100%),
-        conic-gradient(#ff69b4 0%, pink 0);
+        conic-gradient(var(--circular-progress-bar) 0%, var(--bar) 0);
 }
 
 .circle-progress-bar-value {
@@ -124,7 +130,7 @@ span {
     align-items: center;
     background:
         radial-gradient(closest-side, white 79%, transparent 80% 100%),
-        conic-gradient(#ff69b4 20%, pink 0);
+        conic-gradient(var(--circular-progress-bar) 20%, var(--bar) 0);
 }
 
 .circle-progress-bar-value::before {
@@ -149,10 +155,10 @@ span {
 
 .button-green {
     color: #ffffff;
-    background: #75b800;
+    background: var(--linear-progress-bar);
 }
 
 .button-hotpink {
     color: #ffffff;
-    background: #ff69b4;
+    background: var(--circular-progress-bar);
 }
