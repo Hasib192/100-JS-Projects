@@ -40,12 +40,13 @@ body {
 
 h2 {
     font-size: 32px;
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 .count {
     font-size: 72px;
-    margin: 20px 0;
+    margin: 40px 0;
+    display: block;
 }
 
 .buttons {
