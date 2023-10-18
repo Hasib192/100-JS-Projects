@@ -1,0 +1,44 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif
+}
+
+:root {
+    --menu-bg-color: #f3f3f3;
+    --hover-menu-color: #ddd;
+    --active-color: #04aa6d;
+    --black: #000;
+    --white: #fff;
+}
+
+nav {
+    background-color: var(--menu-bg-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: var(--black);
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 21px;
+}
+
+nav a:hover {
+    background-color: var(--hover-menu-color);
+    color: var(--black);
+    cursor: pointer;
+}
+
+nav a.active {
+    background-color: var(--active-color);
+    color: var(--white);
+}
