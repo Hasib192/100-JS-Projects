@@ -1,0 +1,61 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif
+}
+
+body {
+    background-color: #f3f4f6;
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+h2 {
+    font-size: 32px;
+    /* margin: 20px 0; */
+}
+
+.mail-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #fff;
+    padding: 16px 36px;
+    border-radius: 8px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.material-symbols-outlined {
+    /* font-size: 36px; */
+    margin-right: 16px;
+    margin-top: 2px;
+}
+
+.mail-text {
+    font-size: 20px;
+}
+
+.success {
+    background-color: #198754;
+    color: white;
+    border-color: #198754;
+}
+
+.error {
+    background-color: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
