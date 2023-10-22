@@ -1,0 +1,50 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css?family=Lato:700");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif
+}
+
+:root {
+    --background-color: #F3F4F6;
+    --color: #000;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--color);
+}
+
+.count-down {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1 .material-symbols-outlined {
+    font-size: 150px;
+}
+
+.display-date {
+    display: flex;
+    width: 500px;
+    justify-content: space-evenly;
+}
+
+.display-date div {
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.display-date div span {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 200;
+}
