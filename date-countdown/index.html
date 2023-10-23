@@ -7,34 +7,39 @@
     <title>Date Countdown</title>
 
     <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-
 </head>
 
 <body>
-    <main class="count-down">
-        <h1>
-            <span class="material-symbols-outlined">
-                dark_mode
-            </span>
-        </h1>
-        <div class="display-date">
-            <div class="days">
-                <h3 class="countdown-days"></h3>
-                <span>Days</span>
+    <main class="main">
+        <div class="top">
+            <h2>Date Countdown</h2>
+            <p>Input your desire date below. See the seconds tick down to your vacation, weeding, or retirement</p>
+            <div class="input-group">
+                <input type="datetime-local" id="datetime-local">
+                <input type="submit" class="submit" id="submit">
             </div>
-            <div class="hours">
-                <h3 class="countdown-hours"></h3>
-                <span>Hours</span>
+        </div>
+        <div class="countdown hidden">
+            <div class="title">
+                <h2>Date Remaining</h2>
             </div>
-            <div class="minutes">
-                <h3 class="countdown-minutes"></h3>
-                <span>Minutes</span>
-            </div>
-            <div class="seconds">
-                <h3 class="countdown-seconds"></h3>
-                <span>Seconds</span>
+            <div class="display-date">
+                <div class="days">
+                    <h3 class="countdown-days"></h3>
+                    <span>Days</span>
+                </div>
+                <div class="hours">
+                    <h3 class="countdown-hours"></h3>
+                    <span>Hours</span>
+                </div>
+                <div class="minutes">
+                    <h3 class="countdown-minutes"></h3>
+                    <span>Minutes</span>
+                </div>
+                <div class="seconds">
+                    <h3 class="countdown-seconds"></h3>
+                    <span>Seconds</span>
+                </div>
             </div>
         </div>
     </main>

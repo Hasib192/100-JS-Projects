@@ -1,5 +1,5 @@
 /* --- FONTS --- */
-@import url("https://fonts.googleapis.com/css?family=Lato:700");
+@import url("https://fonts.googleapis.com/css?family=Lato");
 
 * {
     margin: 0;
@@ -17,7 +17,7 @@ body {
     color: var(--color);
 }
 
-.count-down {
+.main {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -26,14 +26,56 @@ body {
     flex-direction: column;
 }
 
-h1 .material-symbols-outlined {
-    font-size: 150px;
+.top {
+    width: 600px;
+}
+
+h2 {
+    font-size: 32px;
+    /* margin: 20px 0; */
+}
+
+p {
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    width: 280px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.2em 0.5em;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+
+.submit {
+    cursor: pointer;
+    background-color: #EEEEEE;
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.submit:hover {
+    background-color: #F6F6F6;
+}
+
+.countdown {
+    width: 600px;
 }
 
 .display-date {
     display: flex;
-    width: 500px;
     justify-content: space-evenly;
+    margin: 20px 0;
 }
 
 .display-date div {
@@ -44,7 +86,15 @@ h1 .material-symbols-outlined {
 }
 
 .display-date div span {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     text-transform: uppercase;
     font-weight: 200;
+}
+
+.red {
+    color: #E84545;
+}
+
+.hidden {
+    display: none;
 }

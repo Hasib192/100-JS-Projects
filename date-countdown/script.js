@@ -1,58 +1,46 @@
-function getFormattedDate(date) {
-  let year = date.getFullYear();
-  let month = (1 + date.getMonth()).toString().padStart(2, "0");
-  let day = date.getDate().toString().padStart(2, "0");
+let submit = document.querySelector("#submit");
+let input = document.querySelector("#datetime-local");
+let hidden = document.querySelector(".hidden");
 
-  return month + "/" + day + "/" + year;
-}
+let currentDateTime = new Date().toISOString();
+input.min = currentDateTime.slice(0, 16);
 
-function interval(date1, date2) {
-  if (date1 > date2) {
-    // swap
-    var result = interval(date2, date1);
-    result.years = -result.years;
-    result.months = -result.months;
-    result.days = -result.days;
-    result.hours = -result.hours;
-    return result;
+submit.addEventListener("click", function () {
+  let endDate = new Date(input.value).getTime();
+
+  setInterval(calcDate, 1000);
+
+  hidden.classList.remove("hidden");
+
+  function calcDate() {
+    let today = new Date().getTime();
+
+    // Calculate the time difference in milliseconds
+    let timeDiff = endDate - today;
+
+    // years
+    let years = Math.floor(timeDiff / (365 * 24 * 60 * 60 * 1000));
+
+    // months
+    let months = Math.floor(timeDiff / (30 * 24 * 60 * 60 * 1000));
+
+    // days
+    let days = Math.floor(timeDiff / (24 * 60 * 60 * 1000));
+
+    // hours
+    let hours = Math.floor((timeDiff % (24 * 60 * 60 * 1000)) / (60 * 60 * 1000));
+
+    // minutes
+    let minutes = Math.floor((timeDiff % (60 * 60 * 1000)) / (60 * 1000));
+
+    // seconds
+    let seconds = Math.floor((timeDiff % (60 * 1000)) / 1000);
+
+    // document.getElementById("demo").innerHTML = days + "d" + " " + hours + "h" + " " + minutes + "m" + " " + seconds + "s";
+
+    document.querySelector(".countdown-days").innerHTML = days;
+    document.querySelector(".countdown-hours").innerHTML = hours;
+    document.querySelector(".countdown-minutes").innerHTML = minutes;
+    document.querySelector(".countdown-seconds").innerHTML = seconds;
   }
-  result = {
-    years: date2.getYear() - date1.getYear(),
-    months: date2.getMonth() - date1.getMonth(),
-    days: date2.getDate() - date1.getDate(),
-    hours: date2.getHours() - date1.getHours(),
-    mintues: date2.getMinutes() - date1.getMinutes(),
-    seconds: date2.getSeconds() - date1.getSeconds(),
-  };
-  if (result.hours < 0) {
-    result.days--;
-    result.hours += 24;
-  }
-  if (result.days < 0) {
-    result.months--;
-    // days = days left in date1's month,
-    //   plus days that have passed in date2's month
-    var copy1 = new Date(date1.getTime());
-    copy1.setDate(32);
-    result.days = 32 - date1.getDate() - copy1.getDate() + date2.getDate();
-  }
-  if (result.months < 0) {
-    result.years--;
-    result.months += 12;
-  }
-
-  days.innerHTML = result.days;
-  hours.innerHTML = result.hours;
-  minutes.innerHTML = result.mintues;
-  seconds.innerHTML = result.seconds;
-}
-
-const date1 = new Date("10/22/2023 01:15:00");
-const date2 = new Date("12/30/2023 00:00:00");
-
-var days = document.querySelector(".countdown-days");
-var hours = document.querySelector(".countdown-hours");
-var minutes = document.querySelector(".countdown-minutes");
-var seconds = document.querySelector(".countdown-seconds");
-
-setInterval(interval(date1, date2), 1000);
+});
