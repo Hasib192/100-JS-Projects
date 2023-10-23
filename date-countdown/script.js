@@ -2,13 +2,19 @@ let submit = document.querySelector("#submit");
 let input = document.querySelector("#datetime-local");
 let hidden = document.querySelector(".hidden");
 
+let timerId = null;
+
 let currentDateTime = new Date().toISOString();
 input.min = currentDateTime.slice(0, 16);
 
 submit.addEventListener("click", function () {
   let endDate = new Date(input.value).getTime();
 
-  setInterval(calcDate, 1000);
+  if (timerId !== null) {
+    clearInterval(timerId);
+  }
+
+  timerId = setInterval(calcDate, 1000);
 
   hidden.classList.remove("hidden");
 
