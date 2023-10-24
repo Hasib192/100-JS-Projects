@@ -1,0 +1,109 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif
+}
+
+:root {
+    --main-bg-color: #f3f4f6;
+    --white: #fff;
+
+    --btn-green: #3dd28d;
+    --btn-green-hover: #2da67a;
+
+    --btn-black: #161616;
+    --btn-black-hover: #2d2d2d;
+
+    --btn-red: #f32c52;
+    --btn-red-hover: #e0173e;
+}
+
+/* --- CENTERED ELEMENT --- */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* --- ELEMENT: COLOR AND SHAPE ---*/
+body {
+    background-color: var(--main-bg-color);
+}
+
+.element {
+    background-color: var(--white);
+    /* width: 600px; */
+    padding: 60px 30px;
+    box-shadow: 20px 20px 15px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 32px;
+    /* margin: 20px 0; */
+}
+
+.timer {
+    font-size: 72px;
+    margin: 40px 0;
+    display: block;
+    /* font-family: 'Digital-7', sans-serif; */
+    /* font-weight: 700; */
+}
+
+.buttons {
+    display: flex;
+    /* margin: 60px auto; */
+    justify-content: center;
+}
+
+.material-symbols-outlined {
+    margin-right: 5px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 12px 12px;
+    cursor: pointer;
+    transition: all 150ms linear;
+    border: 0 none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    box-shadow: 2px 5px 10px #e4e4e4;
+    width: 160px;
+    color: var(--white);
+}
+
+.button-green {
+    background: var(--btn-green);
+}
+
+.button-green:hover {
+    background: var(--btn-green-hover);
+}
+
+.button-black {
+    background: var(--btn-black);
+}
+
+.button-black:hover {
+    background: var(--btn-black-hover);
+}
+
+.button-red {
+    background: var(--btn-red);
+}
+
+.button-red:hover {
+    background: var(--btn-red-hover);
+}
