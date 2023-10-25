@@ -1,0 +1,72 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif
+}
+
+:root {
+    --main-bg-color: #f3f4f6;
+    --white: #fff;
+}
+
+/* --- CENTERED ELEMENT --- */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* --- ELEMENT: COLOR AND SHAPE ---*/
+body {
+    background-color: var(--main-bg-color);
+}
+
+.text-group {
+    width: 480px;
+}
+
+h2 {
+    font-size: 32px;
+    /* margin: 20px 0; */
+}
+
+p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.input,
+.submit {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    border-radius: 0;
+    -webkit-appearance: none;
+}
+
+.input {
+    border: 1px solid lightgray;
+    width: 380px;
+}
+
+.submit {
+    background-color: lightgreen;
+    /**
+     * If the input field has a border,
+     * you need it here too to achieve equal heights.
+     */
+    border: 1px solid transparent;
+}
+
+/**
+ * Firefox Fix
+ * Without that the submit button will be too high.
+ */
+.submit::-moz-focus-inner {
+    border: 0;
+}
