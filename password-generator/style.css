@@ -1,0 +1,116 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #f3f4f6;
+    --white: #fff;
+}
+
+/* --- CENTERED ELEMENT --- */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* --- ELEMENT: COLOR AND SHAPE ---*/
+body {
+    background-color: var(--main-bg-color);
+}
+
+.element {
+    background-color: var(--white);
+    /* width: 600px; */
+    padding: 60px 45px;
+    box-shadow: 20px 20px 15px -5px rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 10px;
+}
+
+.password-generator {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    max-width: 400px;
+    width: 100%;
+}
+
+h2 {
+    font-size: 32px;
+    /* margin: 20px 0; */
+    /* margin-bottom: 20px; */
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.checkboxDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    font: 15px/24px "Lato", Arial, sans-serif;
+    letter-spacing: 1px;
+    padding: 10px 7px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+input[type="number"] {
+    width: 20%;
+    /* padding: 10px; */
+    padding: 0 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font: 15px/24px "Lato", Arial, sans-serif;
+    text-align: end;
+}
+
+button {
+    background-color: #0d6efd;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 150ms linear;
+    border: 0 none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    box-shadow: 2px 5px 10px #e4e4e4;
+}
+
+button:hover {
+    background-color: #0B5ED8;
+}
