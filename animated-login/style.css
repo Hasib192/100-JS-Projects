@@ -1,0 +1,107 @@
+/* --- FONTS --- */
+@import url("https://fonts.googleapis.com/css?family=Lato");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg-color: #f3f4f6;
+    --white: #fff;
+    --body-color: #384047;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--body-color);
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    max-width: 300px;
+    width: 480px;
+    background-color: var(--white);
+    padding: 60px 30px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    border-radius: 10px;
+    position: relative;
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    /* margin-bottom: 30px; */
+}
+
+p {
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+input[type="password"],
+input[type="email"] {
+    /* margin-bottom: 30px; */
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font: 15px/24px "Lato", Arial, sans-serif;
+    letter-spacing: 1px;
+    padding: 10px 7px;
+    outline: 0;
+}
+
+button {
+    padding: 19px 39px;
+    color: #FFF;
+    background-color: #4bc970;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+}
+
+.button-left {
+    transform: translateX(0);
+}
+
+.button-right {
+    transform: translateX(150%);
+}
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+@media screen and (min-width: 480px) {
+    form {
+        max-width: 480px;
+    }
+}
